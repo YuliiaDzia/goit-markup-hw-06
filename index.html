@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
 
-
     <body>
+<!--ШАПКА-->
         <header class="header">
             <div class="container nav-flex">
                 <nav class="header-nav">
@@ -35,15 +35,16 @@
             </div>
         </header>
 
-
+<!--ОСНОВНИЙ КОНТЕНТ-->
         <main>
+<!--ГЕРОЙ-->
             <section class="hero">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
                 <button data-modal-open class="hero-btn" type="button">Замовити послугу</button>
                 
             </section>
 
-
+<!--СПИСОК ПЕРЕВАГ-->
             <section class="features-section">
                 <div class="container">
                     <h2 class="visually-hidden">Our advantages</h2>
@@ -84,7 +85,7 @@
                 </div>
             </section>
 
-
+<!--СПИСОК ЗАНЯТЬ-->           
             <section class="work-section">
                 <div class="container">
                     <h2 class="section-title">Чим ми займаємося</h2>
@@ -102,8 +103,7 @@
                 </div>
             </section>
 
-
-
+<!--КОМАНДА-->
             <section class="team-section">
                 <div class="container">
                     <h2 class="section-title">Наша команда</h2>
@@ -164,9 +164,7 @@
                 </div>
             </section>
 
-
-
-            <!--CLIENTS-->
+<!--КЛІЄНТИ-->
             <section class="client-section">
                 <div class="container">
                     <h2 class="client-title">Постійні клієнти</h2>
@@ -182,8 +180,7 @@
             </section>
         </main>
 
-
-
+<!--ПІДВАЛ-->
         <footer class="footer">
             <div class="container">
                 <div class="footer-flex">
@@ -206,13 +203,66 @@
                             <li class="footer-social-item"><a class="footer-social-link" href=""><svg class="footer-social-icon" width="20" height="20"><use href="./images/icons.svg#icon-linkedin"></use></svg></a></li>
                         </ul>
                     </div>
+                    <div class="footer-submit">
+                        <p class="footer-submit-text">ПІДПИШИТЬСЯ НА РОЗСИЛКУ</p>
+                        <div class="footer-submit-form">
+                          <label class="footer-submit-label" for="submit-mail"></label>
+                          <input class="footer-submit-input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail">
+                          <button class="footer-submit-btn" type="submit">Підписатися</button>
+                        </div>
                 </div>
             </div>    
         </footer>
+<!---ЗАМОВИТИ ПОСЛУГУ-->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <p></p>
-                <button data-modal-close class="data-modal-close">&#10761</button>
+                <button type="button" class="close-btn" data-modal-close>&#10761</button>
+
+                <form class="form">
+                    <span class="form-title">Залиште свої дані, ми вам передзвонимо</span>
+                         
+                    <div class="form-field top-title">
+                      <label class="form-label" for="name">Ім'я</label>
+                      <input class="form-input" type="text" name="name" id="name">
+                      <svg class="input-icon" width="12" height="12">
+                        <use
+                            href="./images/symbol.svg#person-black"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="tel">Телефон</label>
+                      <input class="form-input" type="tel" name="tel" id="tel">
+                      <svg class="input-icon" width="12" height="12">
+                        <use
+                            href="./images/symbol.svg#icon-tel"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="email">Пошта</label>
+                      <input class="form-input" type="email" name="email" id="email">
+                      <svg class="input-icon" width="12" height="12">
+                        <use
+                            href="./images/symbol.svg#icon-mail"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="form-field">
+                      <label class="comment-label" for="comment">Коментар</label>
+                      <textarea class="comment" name="comment" id="comment" rows="9" placeholder="Введіть текст"></textarea>
+                    </div>
+                    <div class="form-field-chek">
+                      
+                      <label class="policy-label" for="policy"></a> 
+                        <input class="form-checkbox" type="checkbox" name="policy" id="policy">
+                        <span class="icon-chek"></span>
+                        Погоджуюся з розсилкою та приймаю <a class="policy-link" href="">Умови договору</a>
+                      </label>
+                      
+                    </div>
+                    <button class="form-btn" type="submit">Відправити</button>
+                  </form>
             </div>
         </div>        
         <script src="./js/modal.js"></script>
